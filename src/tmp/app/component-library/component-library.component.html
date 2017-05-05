@@ -1,0 +1,18 @@
+<div class="navbar navbar-inverse navbar-static-top" style="margin-bottom: 0;">
+    <h1 style="color:#fff">SNAPP Component Library</h1>
+</div>
+<div class="container-fluid noPadding">
+    <div class="row compLib col-md-12">
+        <div class="col-md-3">
+            <form class="navbar-form" role="search">
+                <div class="input-group">
+                    <input name="search" type="text" class="form-control" placeholder="Search" [(ngModel)]="searchComponent">
+
+                </div>
+            </form>
+            <div class="section" *ngFor="let componentlib of (libraryComponents|dlFilter:searchComponent)"> <a [ngClass]="{'active' : componentlib.id==selectedComponent.id}" (click)="onSelect(componentlib)">{{componentlib.name}}</a>
+            </div>
+        </div>
+        <dl-component-details [libraryComponents]="selectedComponent" class="col-md-9"></dl-component-details>
+    </div>
+</div>

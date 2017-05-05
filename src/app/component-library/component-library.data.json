@@ -1,0 +1,81 @@
+{
+    "libraryComponent": [{
+            "id": "date-picker",
+            "name": "Datepicker",
+            "title": "Datepicker",
+            "shortDescription": "Datepicker is a highly configurable component that adds datepicker functionality to your pages. You can customize the date format and Minimum-maximum date range, number of month in datepicker .Want to learn more about the datepicker Check out the",
+            "apiLink":"http://api.jqueryui.com/datepicker/",
+            "usage": [{ "title": "TypeScript File", "use": "<pre><code>import { DatepickerModule } from '.\/datepicker\/datepicker.module';\r\n\r\n@NgModule({\r\n  imports: [DatepickerModule]\r\n})\r\n\r\nexport class AppModule {}\r\n<\/code><\/pre>" }, { "title": "HTML File", "use": "<pre><code>&lt;div dl-datepicker #datepickerDir1=datepickerDirective [dateconfig]=\"{type:'withButtons', maxDate:365, minDate:0, noOfMonth:3, dateFormat:'dM'}\"&gt;&lt;\/div&gt;\r\n<\/code><\/pre>", "example": "date-picker1" }, { "title": "HTML File", "use": "<pre><code>&lt;div dl-datepicker #datepickerDir2=datepickerDirective [dateconfig]=\"{type:'withText', maxDate:365, minDate:0, noOfMonth:1, dateFormat:'dM'}\"&gt;&lt;\/div&gt;\r\n<\/code><\/pre>", "example": "date-picker2" }, { "title": "HTML File", "use": "<pre><code>&lt;div dl-datepicker #datepickerDir3=datepickerDirective [dateconfig]=\"{type:'withRange', noOfMonth:2, dateFormat:'dM'}\"&gt;&lt;\/div\r\n<\/code><\/pre>", "example": "date-picker3" }],
+            "inputTitle":"Inputs",
+            "inputs" : [{"col1": "maxDate", "col2":"Number", "description":"latest selectable date" },{"col1": "minDate", "col2":"Number","description":"oldest selectable date"},{"col1": "noOfMonth", "col2":"Number","description":"The number of months to show at once"},{"col1": "dateFormat", "col2":"string","description":"The format for displayed dates"},{"col1": "type", "col2":"'withButton', 'withText', 'withRange'","description":"It describe which type of component need to be loaded "}]
+
+        },
+        {
+            "id": "time-widget",
+            "name": "Time Widget",
+            "title": "Time Widget",
+            "shortDescription": "Time Widget is a lightweight highly configurable component that allows the user to select time in the form. You can customize the time format.",
+            "usage": [{ "title": "TypeScript File", "use": "<pre><code>import { TimeModule } from '.\/timewidget\/timewidget.module';\r\n\r\n\r\n@NgModule({\r\nimports: [ TimeModule ]})\r\n\r\nexport class SharedModule {\r\n}\r\n<\/code><\/pre>" }, { "title": "HTML File", "use": "<pre><code>  &lt;div dl-timewidget [type]=\"'24hrs'\"&gt;&lt;\/div&gt<\/code><\/pre>", "example": "time-widget1" },
+                { "title": "HTML File", "use": "<pre><code>&lt;div dl-timewidget [type]=\"'hrsandMin'\"&gt;&lt;\/div&gt\r\n<\/code><\/pre>", "example": "time-widget2" },
+                { "title": "HTML File", "use": "<pre><code>    &lt;div dl-timewidget [type]=\"'basic'\"&gt;&lt;\/div&gt\r\n<\/code><\/pre>", "example": "time-widget3" }
+            ],
+            "inputTitle":"Inputs",
+            "inputs" : [{"col1": "type", "col2":"'hrsandMin', '24hrs', 'basic'", "description":"It describe which type of component need to be loaded" }]
+        },
+        {
+            "id": "calculator",
+            "name": "Calculator",
+            "title": "Calculator",
+            "shortDescription": "This calculator does not use eval(). It converts the mathematical expression to the Reverse Polish Notation using the Shunting-yard algorithm and evaluates it manually.",
+            "usage": [{ "title": "TypeScript File", "use": "<pre><code>import { CalculatorModule } from '.\/calculator\/calculator.module';\r\n\r\n@NgModule({\r\n  imports: [CalculatorModule]\r\n})\r\n\r\nexport class AppModule {}\r\n<\/code><\/pre>" }, { "title": "HTML File", "use": "<pre><code>&lt;dl-calculator&gt;&lt;\/dl-calculator&gt;\r\n<\/code><\/pre>", "example": "calculator" }],
+            "example": "TimeModule"
+
+        },
+        {
+            "id": "stack-panel",
+            "name": "Stack Panel",
+            "title": "Stack Panel",
+            "shortDescription": "Displays collapsible content panels for presenting information in a limited amount of space. The stackpanel component builds on top of the collapse directive to provide a list of items, with collapsible bodies that are collapsed or expanded by clicking on the item's header.",
+            "usage": [{ "title": "TypeScript File", "use": "<pre class=\"prettyprint lang-typescript prettyprinted\"><span class=\"pln\">\r\n<\/span><span class=\"kwd\">import<\/span><span class=\"pln\"> <\/span><span class=\"pun\">{<\/span><span class=\"pln\"> <\/span><span class=\"typ\">AccordionModule<\/span><span class=\"pln\"> <\/span><span class=\"pun\">}<\/span><span class=\"pln\"> <\/span><span class=\"kwd\">from<\/span><span class=\"pln\"> <\/span><span class=\"str\">'ngx-bootstrap'<\/span><span class=\"pun\">;<\/span><span class=\"pln\">\r\n\r\n<\/span><span class=\"lit\">@NgModule<\/span><span class=\"pun\">({<\/span><span class=\"pln\">\r\n  imports<\/span><span class=\"pun\">:<\/span><span class=\"pln\"> <\/span><span class=\"pun\">[<\/span><span class=\"typ\">AccordionModule<\/span><span class=\"pun\">.<\/span><span class=\"pln\">forRoot<\/span><span class=\"pun\">(),...]<\/span><span class=\"pln\">\r\n<\/span><span class=\"pun\">})<\/span><span class=\"pln\">\r\n<\/span><span class=\"kwd\">export<\/span><span class=\"pln\"> <\/span><span class=\"kwd\">class<\/span><span class=\"pln\"> <\/span><span class=\"typ\">AppModule<\/span><span class=\"pun\">(){}<\/span><\/pre>" }, { "title": "HTML File", "use": "<pre><code> &lt;accordion&gt;\r\n        &lt;accordion-group heading=\"Static Header, initially expanded\"&gt;\r\n            This content is straight in the template.\r\n        &lt;\/accordion-group&gt;\r\n        &lt;accordion-group #group&gt;\r\n            &lt;div accordion-heading&gt;\r\n                I can have markup, too!\r\n                &lt;i class=\"pull-right float-xs-right glyphicon\" [ngClass]=\"{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}\"&gt;&lt;\/i&gt;\r\n            &lt;\/div&gt;\r\n            This is just some content to illustrate fancy headings.\r\n        &lt;\/accordion-group&gt;\r\n        &lt;accordion-group heading=\"Content 1\"&gt;\r\n            &lt;p&gt;Content 1&lt;\/p&gt;\r\n        &lt;\/accordion-group&gt;\r\n        &lt;accordion-group heading=\"Content 2\"&gt;\r\n            &lt;p&gt;Content 2&lt;\/p&gt;\r\n        &lt;\/accordion-group&gt;\r\n    &lt;\/accordion&gt;\r\n<\/code><\/pre>", "example": "stack-panel" }],
+            "detailsLink": "http://valor-software.com/ngx-bootstrap/#/accordion"
+        },
+        {
+            "id": "tool-tip",
+            "name": "Tool Tip",
+            "title": "Tool Tip",
+            "shortDescription": "Tooltips are an updated version, which don’t rely on images, use CSS3 for animations, and much more.",
+            "usage": [{ "title": "TypeScript File", "use": "<pre class=\"prettyprint lang-typescript prettyprinted\"><span class=\"pln\">\r\n<\/span><span class=\"kwd\">import<\/span><span class=\"pln\"> <\/span><span class=\"pun\">{<\/span><span class=\"pln\"> <\/span><span class=\"typ\">TooltipModule<\/span><span class=\"pln\"> <\/span><span class=\"pun\">}<\/span><span class=\"pln\"> <\/span><span class=\"kwd\">from<\/span><span class=\"pln\"> <\/span><span class=\"str\">'ngx-bootstrap'<\/span><span class=\"pun\">;<\/span><span class=\"pln\">\r\n\r\n<\/span><span class=\"lit\">@NgModule<\/span><span class=\"pun\">({<\/span><span class=\"pln\">\r\n  imports<\/span><span class=\"pun\">:<\/span><span class=\"pln\"> <\/span><span class=\"pun\">[<\/span><span class=\"typ\">TooltipModule<\/span><span class=\"pun\">.<\/span><span class=\"pln\">forRoot<\/span><span class=\"pun\">(),...]<\/span><span class=\"pln\">\r\n<\/span><span class=\"pun\">})<\/span><span class=\"pln\">\r\n<\/span><span class=\"kwd\">export<\/span><span class=\"pln\"> <\/span><span class=\"kwd\">class<\/span><span class=\"pln\"> <\/span><span class=\"typ\">AppModule<\/span><span class=\"pun\">(){}<\/span><\/pre>" }, { "title": "HTML File", "use": "<pre><code>&lt;div&gt;\r\n    &lt;template #popTemplate&gt;Here we go: &lt;div&gt; HTML tooltip&lt;\/div&gt;&lt;\/template&gt;\r\n    &lt;button type=\"button\" class=\"btn btn-success\" [tooltip]=\"popTemplate\"&gt;\r\n  Show me tooltip with html\r\n&lt;\/button&gt;\r\n&lt;\/div&gt;\r\n<\/code><\/pre>", "example": "tool-tip" }],
+            "detailsLink": "http://valor-software.com/ngx-bootstrap/#/tooltip"
+
+        },
+        {
+            "id": "modal",
+            "name": "Modal",
+            "title": "Modal",
+            "shortDescription": "Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.",
+            "usage": [{ "title": "TypeScript File", "use": "<pre class=\"prettyprint lang-typescript prettyprinted\"><span class=\"pln\">\r\n<\/span><span class=\"kwd\">import<\/span><span class=\"pln\"> <\/span><span class=\"pun\">{<\/span><span class=\"pln\"> <\/span><span class=\"typ\">ModalModule<\/span><span class=\"pln\"> <\/span><span class=\"pun\">}<\/span><span class=\"pln\"> <\/span><span class=\"kwd\">from<\/span><span class=\"pln\"> <\/span><span class=\"str\">'ngx-bootstrap'<\/span><span class=\"pun\">;<\/span><span class=\"pln\">\r\n\r\n<\/span><span class=\"lit\">@NgModule<\/span><span class=\"pun\">({<\/span><span class=\"pln\">\r\n  imports<\/span><span class=\"pun\">:<\/span><span class=\"pln\"> <\/span><span class=\"pun\">[<\/span><span class=\"typ\">ModalModule<\/span><span class=\"pun\">.<\/span><span class=\"pln\">forRoot<\/span><span class=\"pun\">(),...]<\/span><span class=\"pln\">\r\n<\/span><span class=\"pun\">})<\/span><span class=\"pln\">\r\n<\/span><span class=\"kwd\">export<\/span><span class=\"pln\"> <\/span><span class=\"kwd\">class<\/span><span class=\"pln\"> <\/span><span class=\"typ\">AppModule<\/span><span class=\"pun\">(){}<\/span><\/pre>" }, { "title": "HTML File", "use": "<pre><code>&lt;div&gt;\r\n    &lt;button type=\"button\" class=\"btn btn-primary\" (click)=\"staticModal.show()\"&gt;Static modal&lt;\/button&gt;\r\n\r\n    &lt;div class=\"modal fade\" bsModal #staticModal=\"bs-modal\" [config]=\"{backdrop: 'static'}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"mySmallModalLabel\" aria-hidden=\"true\"&gt;\r\n        &lt;div class=\"modal-dialog modal-sm\"&gt;\r\n            &lt;div class=\"modal-content\"&gt;\r\n                &lt;div class=\"modal-header\"&gt;\r\n                    &lt;h4 class=\"modal-title pull-left\"&gt;Static modal&lt;\/h4&gt;\r\n                    &lt;button type=\"button\" class=\"close pull-right\" aria-label=\"Close\" (click)=\"staticModal.hide()\"&gt;\r\n          &lt;span aria-hidden=\"true\"&gt;&amp;times;&lt;\/span&gt;\r\n        &lt;\/button&gt;\r\n                &lt;\/div&gt;\r\n                &lt;div class=\"modal-body\"&gt;\r\n                    This is static modal, backdrop click will not close it. Click &lt;b&gt;&amp;times;&lt;\/b&gt; to close modal.\r\n                &lt;\/div&gt;\r\n            &lt;\/div&gt;\r\n        &lt;\/div&gt;\r\n    &lt;\/div&gt;\r\n&lt;\/div&gt;\r\n<\/code><\/pre>", "example": "modal" }],
+            "detailsLink": "http://valor-software.com/ngx-bootstrap/#/modals"
+        },
+        {
+            "id": "autocomplete",
+            "name": "Autocomplete",
+            "title": "Autocomplete",
+            "usage": [{ "title": "TypeScript File", "use": "<pre class=\"prettyprint lang-typescript prettyprinted\"><span class=\"kwd\">import<\/span><span class=\"pln\"> <\/span><span class=\"pun\">{<\/span><span class=\"pln\"> <\/span><span class=\"typ\">TypeaheadModule<\/span><span class=\"pln\"> <\/span><span class=\"pun\">}<\/span><span class=\"pln\"> <\/span><span class=\"kwd\">from<\/span><span class=\"pln\"> <\/span><span class=\"str\">'ngx-bootstrap'<\/span><span class=\"pun\">;<\/span><span class=\"pln\">\r\n\r\n<\/span><span class=\"lit\">@NgModule<\/span><span class=\"pun\">({<\/span><span class=\"pln\">\r\n  imports<\/span><span class=\"pun\">:<\/span><span class=\"pln\"> <\/span><span class=\"pun\">[<\/span><span class=\"typ\">TypeaheadModule<\/span><span class=\"pun\">.<\/span><span class=\"pln\">forRoot<\/span><span class=\"pun\">(),...]<\/span><span class=\"pln\">\r\n<\/span><span class=\"pun\">})<\/span><span class=\"pln\">\r\n<\/span><span class=\"kwd\">export<\/span><span class=\"pln\"> <\/span><span class=\"kwd\">class<\/span><span class=\"pln\"> <\/span><span class=\"typ\">AppModule<\/span><span class=\"pun\">(){}<\/span><\/pre>" }, { "title": "HTML File", "use": "<pre class=\"prettyprint linenums lang-html\">  &lt;input [(ngModel)]=\"asyncSelected\"\r\n         [typeahead]=\"dataSource\"\r\n         (typeaheadLoading)=\"changeTypeaheadLoading($event)\"\r\n         (typeaheadNoResults)=\"changeTypeaheadNoResults($event)\"\r\n         (typeaheadOnSelect)=\"typeaheadOnSelect($event)\"\r\n         typeaheadOptionsLimit=\"7\"\r\n         typeaheadOptionField=\"name\"\r\n         placeholder=\"Locations loaded with timeout\"\r\n         class=\"form-control\"&gt;\r\n  &lt;div *ngIf=\"typeaheadLoading===true\"&gt;\r\n    &lt;i class=\"glyphicon glyphicon-refresh ng-hide\" style=\"\"&gt;&lt;\/i&gt;\r\n  &lt;\/div&gt;\r\n  &lt;div *ngIf=\"typeaheadNoResults===true\" class=\"\" style=\"\"&gt;\r\n    &lt;i class=\"glyphicon glyphicon-remove\"&gt;&lt;\/i&gt; No Results Found\r\n  &lt;\/div&gt;\r\n<\/pre> ", "example": "autocomplete" }],
+            "detailsLink": "http://valor-software.com/ngx-bootstrap/#/typeahead"
+        },
+        {
+            "id": "captionpanel",
+            "name": "Caption Panel",
+            "title": "Caption Panel",
+            "usage": [{ "title": "", "use": "" }, { "title": "HTML File", "use": "<pre><code>&lt;fieldset&gt;\r\n        &lt;legend&gt;Search By&lt;\/legend&gt;\r\n        &lt;div class=\"col-sm-6\"&gt;\r\n            &lt;label&gt;Bag Tag: &lt;span&gt;*&lt;\/span&gt;&lt;\/label&gt;\r\n            &lt;input type=\"text\" \/&gt;\r\n        &lt;\/div&gt;\r\n        &lt;div class=\"col-sm-6\"&gt;\r\n            &lt;label&gt;Last Name: &lt;\/label&gt;\r\n            &lt;input type=\"text\" \/&gt;\r\n        &lt;\/div&gt;\r\n        &lt;div class=\"col-sm-12\"&gt;\r\n            &lt;div class=\"col-sm-offset-11\"&gt;\r\n                &lt;button type=\"button\" class=\"btn btn-default\"&gt;Search&lt;\/button&gt;\r\n            &lt;\/div&gt;\r\n        &lt;\/div&gt;\r\n&lt;\/fieldset&gt; \r\n<\/code><\/pre> ", "example": "captionpanel" }],
+            "detailsLink": ""
+        },
+        {
+            "id": "warnings",
+            "name": "Warnings",
+            "title": "Warnings",
+            "usage": [{ "title": "", "use": "" }, { "title": "HTML File", "use": "<pre><code>&lt;div class=\"alert alert-danger\"&gt;\r\n        &lt;strong&gt;Danger!&lt;\/strong&gt; Indicates a dangerous or potentially negative action.\r\n    &lt;\/div&gt;\r\n\r\n<\/code><\/pre> ", "example": "warnings1" },{ "title": "HTML File", "use": "<pre><code>&lt;div class=\"alert alert-warning\"&gt;\r\n        &lt;strong&gt;Warning!&lt;\/strong&gt; Indicates a warning that might need attention.\r\n &lt;\/div&gt;<\/code><\/pre> ", "example": "warnings2" },{ "title": "HTML File", "use": "<pre><code>&lt;div class=\"alert alert-info\"&gt;\r\n        &lt;strong&gt;Info!&lt;\/strong&gt; Indicates a neutral informative change or action.\r\n    &lt;\/div&gt;\r\n<\/code><\/pre> ", "example": "warnings3" }],
+            "detailsLink": ""
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+<div>
+    <label>Time:</label>
+    <select>
+  <option *ngFor="let Hrs of hourList" value="{{Hrs.currentHour}}">
+    {{Hrs.currentHour}}
+  </option>
+</select>
+    <select>
+  <option *ngFor="let Min of MinList" value="{{Min.currentMin}}">
+    {{Min.currentMin}}
+  </option>
+</select>
+    <select>
+  <option *ngFor="let Period of timePeriodList" value="{{Period.currenttimePeriod}}">
+    {{Period.currenttimePeriod}}
+  </option>
+</select>
+</div>

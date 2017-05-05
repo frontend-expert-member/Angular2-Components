@@ -1,0 +1,83 @@
+<div class="panel panel-default">
+
+    <accordion>
+        <accordion-group heading="Static Header, initially expanded">
+            This content is straight in the template.
+        </accordion-group>
+        <accordion-group #group>
+            <div accordion-heading>
+                I can have markup, too!
+                <i class="pull-right float-xs-right glyphicon" [ngClass]="{'glyphicon-chevron-down': group?.isOpen, 'glyphicon-chevron-right': !group?.isOpen}"></i>
+            </div>
+            This is just some content to illustrate fancy headings.
+        </accordion-group>
+        <accordion-group heading="Content 1">
+            <p>Content 1</p>
+        </accordion-group>
+        <accordion-group heading="Content 2">
+            <p>Content 2</p>
+        </accordion-group>
+    </accordion>
+
+</div>
+
+<div class="panel panel-default">
+
+    <template #popTemplate>Here we go: <div> HTML tooltip</div></template>
+    <button type="button" class="btn btn-success" [tooltip]="popTemplate">
+  Show me tooltip with html
+</button>
+</div>
+
+
+<div class="panel panel-default">
+    <button type="button" class="btn btn-primary" (click)="staticModal.show()">Static modal</button>
+
+    <div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title pull-left">Static modal</h4>
+                    <button type="button" class="close pull-right" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    This is static modal, backdrop click will not close it. Click <b>&times;</b> to close modal.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="panel panel-default">
+
+    <alert type="info">
+        <strong>Info-Warning!</strong> Better check yourself, you're not looking too good.
+    </alert>
+    <alert type="sucess">
+        <strong>Sucess-Warning!</strong> Better check yourself, you're not looking too good.
+    </alert>
+    <alert type="warning">
+        <strong>Warning-Warning!</strong> Better check yourself, you're not looking too good.
+    </alert>
+    <alert type="danger">
+        <strong>Error-Warning!</strong> Better check yourself, you're not looking too good.
+    </alert>
+
+    <div dl-timewidget [type]=1></div>
+
+    <div dl-timewidget [type]=2></div>
+
+    <div dl-timewidget></div>
+
+    <div dl-datepicker #datepickerDir1=datepickerDirective [dateconfig]="{type:'withButtons', maxDate:365, minDate:0, noOfMonth:3, dateFormat:'dM'}"></div>
+
+    <div dl-datepicker #datepickerDir2=datepickerDirective [dateconfig]="{type:'withText', maxDate:365, minDate:0, noOfMonth:1, dateFormat:'dM'}"></div>
+
+    <div dl-datepicker #datepickerDir3=datepickerDirective [dateconfig]="{type:'withRange', noOfMonth:2}"></div>
+
+
+
+</div>

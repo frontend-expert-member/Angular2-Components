@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/shared/footer/footer.module.ts"],"names":[],"mappings":";;;;;;;;AAAA,kBAAkB;AAClB,sCAAyC;AAEzC,2BAA2B;AAC3B,uDAAqD;AAarD,IAAa,YAAY;IAAzB;IAEA,CAAC;IAAD,mBAAC;AAAD,CAFA,AAEC,IAAA;AAFY,YAAY;IAXxB,eAAQ,CAAC;QACN,OAAO,EAAE,EAER;QACD,YAAY,EAAE;YACV,kCAAe;SAClB;QACD,OAAO,EAAE;YACL,kCAAe;SAClB;KACJ,CAAC;GACW,YAAY,CAExB;AAFY,oCAAY","file":"footer.module.js"}

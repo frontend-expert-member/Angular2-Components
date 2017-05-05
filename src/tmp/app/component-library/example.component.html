@@ -1,0 +1,121 @@
+<div *ngIf="id ==='date-picker1'" dl-datepicker #datepickerDir1=datepickerDirective [dateconfig]="{type:'withButtons', maxDate:365, minDate:0, noOfMonth:3, dateFormat:'dM'}"></div>
+
+<div *ngIf="id ==='date-picker2'" dl-datepicker #datepickerDir2=datepickerDirective [dateconfig]="{type:'withText', maxDate:365, minDate:0, noOfMonth:1, dateFormat:'dM'}"></div>
+
+<div *ngIf="id ==='date-picker3'" dl-datepicker #datepickerDir3=datepickerDirective [dateconfig]="{type:'withRange', noOfMonth:2, dateFormat:'dM'}"></div>
+
+
+
+<div *ngIf="id ==='time-widget1'" dl-timewidget [type]="'24hrs'"></div>
+<div *ngIf="id ==='time-widget2'" dl-timewidget [type]="'hrsandMin'"></div>
+<div *ngIf="id ==='time-widget3'" dl-timewidget [type]="'basic'"></div>
+
+
+
+<dl-calculator *ngIf="id ==='calculator'"></dl-calculator>
+
+<div *ngIf="id ==='tool-tip'">
+    <template #popTemplate>
+        <div>
+            Click the flight number to view flight status
+        </div>
+    </template>
+    <button type="button" class="btn btn-success" [tooltip]="popTemplate">
+  Tooltip
+</button>
+</div>
+
+<div *ngIf="id ==='stack-panel'">
+    <accordion>
+        <accordion-group #group>
+            <div accordion-heading>
+                Static Header, initially expanded
+                <i class="pull-left float-xs-left glyphicon panel-icon" [ngClass]="{'glyphicon-triangle-bottom': group?.isOpen, 'glyphicon-triangle-right': !group?.isOpen}"></i>
+            </div>
+            This content is straight in the template.
+        </accordion-group>
+        <accordion-group #group1>
+            <div accordion-heading>
+                I can have markup, too!
+                <i class="pull-left float-xs-left glyphicon panel-icon" [ngClass]="{'glyphicon-triangle-bottom': group1?.isOpen, 'glyphicon-triangle-right': !group1?.isOpen}"></i>
+            </div>
+            This is just some content to illustrate fancy headings.
+        </accordion-group>
+        <accordion-group #group2>
+            <div accordion-heading>
+                Content 1
+                <i class="pull-left float-xs-left glyphicon panel-icon" [ngClass]="{'glyphicon-triangle-bottom': group2?.isOpen, 'glyphicon-triangle-right': !group2?.isOpen}"></i>
+            </div>
+            Content 1
+        </accordion-group>
+        <accordion-group #group3>
+            <div accordion-heading>
+                Content 2
+                <i class="pull-left float-xs-left glyphicon panel-icon" [ngClass]="{'glyphicon-triangle-bottom': group3?.isOpen, 'glyphicon-triangle-right': !group3?.isOpen}"></i>
+            </div>
+            Content 1
+        </accordion-group>
+    </accordion>
+</div>
+
+<div *ngIf="id ==='modal'">
+    <button type="button" class="btn btn-primary" (click)="staticModal.show()">Static modal</button>
+
+    <div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Static modal</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="staticModal.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                </div>
+                <div class="modal-body">
+                    This is static modal, backdrop click will not close it. Click <b>&times;</b> to close modal.
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+<div *ngIf="id ==='autocomplete'">
+    <input [(ngModel)]="asyncSelected" [typeahead]="dataSource" (typeaheadLoading)="changeTypeaheadLoading($event)" (typeaheadNoResults)="changeTypeaheadNoResults($event)"
+        (typeaheadOnSelect)="typeaheadOnSelect($event)" typeaheadOptionsLimit="7" typeaheadOptionField="name" placeholder="Locations loaded with timeout"
+        class="form-control">
+        <div *ngIf="typeaheadLoading===true">
+            <i class="glyphicon glyphicon-refresh ng-hide"></i>
+        </div>
+        <div *ngIf="typeaheadNoResults===true" class="">
+            <i class="glyphicon glyphicon-remove"></i> No Results Found
+        </div>
+</div>
+<div *ngIf="id ==='captionpanel'" class="captionPanel">
+    <fieldset>
+        <legend>Search By</legend>
+        <div class="col-sm-6">
+            <label>Bag Tag: <span>*</span></label>
+            <input type="text" />
+        </div>
+        <div class="col-sm-6">
+            <label>Last Name: </label>
+            <input type="text" />
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-offset-11">
+                <button type="button" class="btn btn-default">Search</button>
+            </div>
+        </div>
+    </fieldset>
+</div>
+
+    <div *ngIf="id ==='warnings1'">
+        <div  class="alert alert-danger">
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+        </div>
+    </div>
+    <div *ngIf="id ==='warnings2'" class="alert alert-warning">
+        <strong>Info!</strong> Indicates a neutral informative change or action.
+    </div>
+    <div *ngIf="id ==='warnings3'" class="alert alert-info">
+        <strong>Warning!</strong> Indicates a warning that might need attention.
+    </div>

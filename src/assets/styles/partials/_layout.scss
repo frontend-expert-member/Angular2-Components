@@ -1,0 +1,28 @@
+.panel-icon {
+    padding-right: 20px;
+}
+
+.noPadding {
+    padding: 0;
+}
+
+.compLib{
+    display: table;
+}
+
+.col-md-3{
+    height: 900px;
+}
+
+.compLib .col-md-9, .col-md-3{
+    float: none;
+    display: table-cell;
+}
+.compLib .col-md-3{
+    background: #000;
+    
+}
+
+.detailsLink{
+    color: #2d69b8
+}

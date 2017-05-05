@@ -1,0 +1,77 @@
+/*Customized Style*/
+
+body {
+    //background: $gray-base;
+    font-family: $font-family-sans-serif;
+    color: $gray-base;
+    //@include background('./images/body-bg.png', 0 0, repeat-x);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: $gray-base;
+}
+/*Buttons*/
+.btn {
+    border-radius: $border-radius-base;
+    border: none;
+    text-transform: none;
+}
+
+.btn-primary{
+    @include gradient-vertical(#85bed8, #066a9b, 0%, 100%);
+    color: $btn-primary-color;
+    padding: $padding-large-vertical;
+    
+}
+
+.btn-success {
+    @include gradient-vertical(#77b675, #0f7e15, 0%, 100%);
+    color: $btn-success-color;
+    padding: $padding-large-vertical;
+}
+
+.btn-success-small {
+    @include gradient-vertical(#77b675, #0f7e15, 0%, 100%);
+    color: $btn-success-color;
+    font-size: $font-size-small;
+    padding: $padding-small-vertical;
+}
+
+.btn-danger {
+    @include gradient-vertical(#c56e82, #a20c29, 0%, 100%);
+    color: $btn-danger-color;
+    padding: $padding-large-vertical;
+}
+
+.btn-default {
+    @include gradient-vertical(#dcdbdb, #9d9b9c, 0%, 100%);
+    color: $btn-default-color;
+    padding: $padding-large-vertical;
+}
+
+/*Buttons*/
+
+/*Alerts*/
+.alert {
+    border: $state-danger-border;
+    font-size: $font-size-base;
+    //display: $inline-block;
+    border-radius: 0;
+}
+
+.alert-danger{
+    @include gradient-vertical-three-colors(#903B38, #B85C5D, 50%, #85001D);
+    color: $state-danger-text;
+}
+
+.alert-warning{
+    @include gradient-vertical-three-colors(#FBF087, #FFFDC0, 50%, #F0D830);
+    color: $state-warning-text;
+}
+
+.alert-info {
+    @include gradient-vertical-three-colors(#F0F4F3, #CCD7E1, 50%, #F0F4F3);
+    color: $state-warning-text;
+}
+
+/*Alerts*/

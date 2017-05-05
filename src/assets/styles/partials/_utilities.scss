@@ -1,0 +1,12 @@
+a:focus,
+button.btn-secondary:focus,
+input:focus,
+.submitbutton:focus {
+    outline-width: 4px;
+    outline-style: solid;
+    outline-color: #79b8f5;
+}
+
+.no-padding {
+    padding: 0;
+}
